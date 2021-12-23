@@ -1,0 +1,42 @@
+<section>
+    <h1 class="text-center my-5">Ajouter un nouveau pokémon</h1>
+<div class="row">
+
+    <div class="col-md-10 mx-auto">
+        <form  #f="ngForm" (ngSubmit)="onSubmit(f)" >     
+<div class="form-group">
+    <label for="name">Id</label>
+    <input type="number" class="form-control" id="id" [(ngModel)]="pokemon.id" #name="ngModel" name="id" required >
+    <label for="name">Nom</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="pokemon.name" #name="ngModel" name="name" required >
+    </div>
+    <div class="form-group">
+    <label for="name">Vie</label>
+    <input type="number" class="form-control" id="hp" [(ngModel)]="pokemon.hp" #name="ngModel" name="hp" required >
+</div>
+<div class="form-group">
+    <label for="name">Dégat</label>
+    <input type="number" class="form-control" id="cp" [(ngModel)]="pokemon.cp" #name="ngModel" name="cp" required >
+    </div>
+    <div class="form-group">
+    <label for="name">Elément</label>
+    <input type="text" class="form-control" id="types" [(ngModel)]="pokemon.types" #name="ngModel" name="types" required >
+    </div>
+    <label for="name">Image</label>
+    <input type="text" class="form-control" id="picture" [(ngModel)]="pokemon.picture" #name="ngModel" name="picture" required >
+    <div class="form-group">
+    <label for="name">Date</label>
+    <input type="date" class="form-control" id="created" [(ngModel)]="pokemon.created" #name="ngModel" name="created" required >
+    </div>
+
+
+<div class="section_center text-center"  >
+<button type="submit" class="btn btn-warning  my-3" >Ajoutez</button>
+
+</div>
+
+        </form>
+    </div>
+</div>
+
+</section>

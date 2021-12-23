@@ -1,1 +1,18 @@
-
+<app-nav></app-nav>
+<div class="main">
+    <section class="container bg-light">
+      <div class="row">
+        <div  class="card pokeball col-md-4 m-3 mx-auto rounded-2"
+          style="width: 18rem;" *ngFor="let pokemon of pokemons">
+         <a [routerLink] = "['/single', pokemon.id]" >
+            <img [src]="pokemon.picture" class="card-img-top" alt="...">
+          </a>  
+            <div class="card-body">
+              <h5 class="text-center">{{pokemon.name}}</h5>
+              
+            </div>
+          
+        </div>
+      </div>
+    </section>
+  </div>
